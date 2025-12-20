@@ -1,19 +1,18 @@
 package com.example.Notification.Service._7.events;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+//@Builder
 @NoArgsConstructor
-@Builder
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-// Dinh nghia cau truc du lieu tpoic
-public class FcmTokenEvent {
+public class DeviceEvent {
     private String deviceId;
-    private String fcmToken;
-    private FcmTokenEvent(String deviceId,String fcmToken){
-    }
+    private Long userId;
+    private DataEvent body;
+    public DeviceEvent(String deviceId,Long userId, DeviceEvent body){}
 }

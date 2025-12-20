@@ -5,11 +5,11 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class FcmTokenRequest {
+public class UserRequest {
+    private Long userId;
     private String deviceId;
-    private String token;
 
-    public FcmTokenRequest() {
+    public UserRequest() {
 
     }
 }

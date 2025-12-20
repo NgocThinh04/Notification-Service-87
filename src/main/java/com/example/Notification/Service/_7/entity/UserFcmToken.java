@@ -19,8 +19,8 @@ public class UserFcmToken {
     @Column(name = "token_id")
     private Long tokenId;
 
-    @Column(name = "user_id", nullable = false)
-    private Integer userId;
+    @Column(name = "user_id")
+    private Long userId;
 
     @Column(name = "fcm_token",nullable = false)
     private String fcmToken;
